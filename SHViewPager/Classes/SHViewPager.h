@@ -40,7 +40,7 @@
 @property (nonatomic, readonly, nonnull) NSArray *menuButtons;
 
 /** returns a dictionay of the content viewcontrollers, key for the value is set as their index. */
-@property (nonatomic, readonly, nonnull) NSDictionary *contentViewControllers;
+@property (nonatomic, nonnull) NSDictionary *contentViewControllers;
 
 /**
  populates or, re-populates the pager contents.
@@ -58,5 +58,10 @@
  check closed issues #1 & #2 for more details.
  */
 -(void)pagerWillLayoutSubviews;
+
+/**
+ Load content for desired index
+ */
+-(void)setUpContentViewForTargetIndex:(NSInteger)index;
 
 @end
